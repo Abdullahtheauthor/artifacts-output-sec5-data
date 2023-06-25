@@ -42,7 +42,7 @@ jobs:
         with:
           name: Dist
       - name: output folders
-        run: ls
+        run: ls -ltra
       - name: output path
         run: pwd    
       - name: Deploy
