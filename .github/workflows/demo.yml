@@ -31,7 +31,12 @@ jobs:
           name: Dist
           path: |
             dist
-            package.json
+            package.json     # you can specify files or dolders as artifacts as you wish
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
